@@ -35,9 +35,13 @@ export default {
     &__header {
         display: flex;
         flex-direction: column;
-        max-width: 19rem;
+        max-width: fit-content;
         margin: 0 auto;
         text-align: left;
+
+        @media screen and (max-width: 768px) {
+            text-align: center;
+        }
     }
 
     &__general-info {
@@ -46,10 +50,25 @@ export default {
         grid-row-gap: .5rem;
         text-align: left;
         margin: 2rem 0;
+
+        @media screen and (max-width: 768px) {
+            margin: 2rem auto 0 auto;
+            text-align: center;
+        }
+
+        @media screen and (max-width: 520px) {
+            grid-template-columns: repeat(1, minmax(100px, 1fr));
+        }
     }
 
     &__picture {
         border-radius: 50%;
+        max-width: 18rem;
+        
+        @media screen and (max-width: 768px) {
+            width: 61vw;
+        }
+
     }
 
     &__name {
@@ -60,6 +79,10 @@ export default {
 
     &__username {
         text-align: left;
+
+        @media screen and (max-width: 768px) {
+            text-align: center;
+        }
     }
 }
 </style>

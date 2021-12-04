@@ -3,12 +3,12 @@
     <h1 class="slide__title--medium">And more these info...</h1>
     <form id="step2-form" class="slide__form">
       <div class="slide__field">
-        <label for="email">Email*</label>
+        <label class="slide__label" for="email">Email*</label>
         <input id="email" class="slide__input" :oninvalid="showEmailErrorMessage" type="email" name="email" @input="updateEmail" :value="form.email" required />
         <span class="slide__field--error-message" ref="error-message"></span>
       </div>
       <div class="slide__field--checkbox">
-        <label for="terms-and-services">Agree with terms and services*</label>
+        <label class="slide__label" for="terms-and-services">Agree with terms and services*</label>
         <input id="terms-and-services" class="slide__input--checkbox" type="checkbox" name="terms-and-services" @input="updateTermsAndServices" :checked="form.termsAndServices" required />
       </div>
     </form>

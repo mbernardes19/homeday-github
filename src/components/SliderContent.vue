@@ -56,14 +56,32 @@ export default {
     font-size: 2.5rem;
     margin: 0 0 .5rem 0;
 
+    @media screen and (max-width: 768px) {
+      font-size: 2rem;
+    }
+    @media screen and (max-width: 380px) {
+      font-size: 1.4rem;
+    }
+
     &--medium {
       font-size: 1.5rem;
       margin: 0 0 2rem 0;
+
+      @media screen and (max-width: 768px) {
+        font-size: 1.25rem;
+      }
     }
   }
 
   &__description {
     margin: 0 0 1rem 0;
+
+    @media screen and (max-width: 768px) {
+      font-size: .9rem;
+    }
+    @media screen and (max-width: 380px) {
+      font-size: .75rem;
+    }
   }
 
   &__button {
@@ -131,6 +149,10 @@ export default {
     &--error-message {
       color: #ed0e0e;
       margin-top: .25rem;
+
+      @media screen and (max-width: 768px) {
+        font-size: .9rem;
+      }
     }
 
     &--checkbox {
@@ -138,6 +160,15 @@ export default {
       align-items: flex-start;
       width: 100%;
       margin: 0 0 1.5rem 0;
+      text-align: left;
+    }
+  }
+
+  &__label {
+    font-size: 1rem;
+
+    @media screen and (max-width: 768px) {
+      font-size: .9rem;
     }
   }
 

@@ -19,6 +19,10 @@ export default {
 .slide {
   &--intro {
     padding: 0 3rem;
+
+    @media screen and (max-width: 768px) {
+      padding: 0 1rem;
+    }
   }
 }
 
