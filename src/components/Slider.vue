@@ -45,9 +45,14 @@ export default {
   max-width: 45rem;
   padding: 2rem;
   margin: 0 1rem;
-  background-color: #040d21;
+  background-color: rgba(4, 13, 33, .7);
   color: #ffffff;
   border-radius: 25px;
   overflow: hidden;
+  margin-top: 1rem;
+
+  @media screen and (max-width: 768px) {
+    margin: 1rem;
+  }
 }
 </style>

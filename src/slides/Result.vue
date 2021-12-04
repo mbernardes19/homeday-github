@@ -1,8 +1,10 @@
 <template>
-  <div class="slide">
-    <h1 class="slide__title--medium">And BAM, here's your profile:</h1>
+  <div class="slide--result">
+    <loader v-if="loading"></loader>
+    <h1 v-if="!loading" class="slide__title--medium">And BAM, here's your profile:</h1>
     <github-profile :data="data"></github-profile>
     {{ error && error.message }}
+    
   </div>
 </template>
 
@@ -11,12 +13,16 @@ import store from '../store';
 import Slide from '../components/Slide.vue';
 import GithubProfile from '../components/GithubProfile.vue';
 import {getGitHubProfile} from '../api';
-import {onMounted, ref} from 'vue';
+import {onMounted, onUnmounted, ref} from 'vue';
+import Loader from '../components/Loader.vue';
 
 export default {
   name: 'Result',
-  components: {GithubProfile},
+  components: {GithubProfile, Loader},
   mixins: [Slide],
+  beforeCreate() {
+    document.body.style.height = 'unset';
+  },
   setup() {
     const data = ref(null);
     const loading = ref(true);
@@ -30,6 +36,10 @@ export default {
       } catch (e) {
         error.value = e;
       }
+    })
+    
+    onUnmounted(() => {
+      document.body.style.height = '100vh';
     })
 
     return {
@@ -57,6 +67,11 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style scoped lang="scss">
+
+.slide--result {
+  max-width: 39rem;
+  margin: 0 auto;
+}
 
 </style>
