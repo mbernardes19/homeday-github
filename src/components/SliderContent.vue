@@ -58,7 +58,7 @@ export default {
 
     &--medium {
       font-size: 1.5rem;
-      margin: 0 0 1rem 0;
+      margin: 0 0 2rem 0;
     }
   }
 
@@ -118,7 +118,7 @@ export default {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin: 1rem 0 2rem 0;
+    margin: 0 0 2rem 0;
   }
 
   &__field {
@@ -148,6 +148,7 @@ export default {
     border-radius: 10px;
     padding: .5rem;
     border: 0;
+    box-sizing: border-box;
 
     &--checkbox {
       border-radius: 10px;
