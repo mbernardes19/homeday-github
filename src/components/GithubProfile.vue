@@ -7,14 +7,25 @@
     </div>
     <div class="github-profile__body">
         <p v-if="data.bio" class="github-profile__bio">{{ data.bio }}</p>
+        <div class="github-profile__general-info">
+            <profile-item label="Followers" :value="data.followers"></profile-item>
+            <profile-item label="Following" :value="data.following"></profile-item>
+            <profile-item label="Location" :value="data.location"></profile-item>
+            <profile-item label="Email" :value="data.email"></profile-item>
+            <profile-item label="Blog" :value="data.blog"></profile-item>
+            <profile-item label="Twitter" :value="data.twitter_username"></profile-item>
+            <profile-item label="Company" :value="data.company"></profile-item>
+        </div>
     </div>
 </div>
 </template>
 
 <script>
+import ProfileItem from '../components/ProfileItem.vue';
 
 export default {
     name: 'GithubProfile',
+    components: { ProfileItem },
     props: ['data'],
 }
 </script>
@@ -29,8 +40,12 @@ export default {
         text-align: left;
     }
 
-    &__body {
-        
+    &__general-info {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(100px, 1fr));
+        grid-row-gap: .5rem;
+        text-align: left;
+        margin: 2rem 0;
     }
 
     &__picture {
