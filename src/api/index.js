@@ -4,14 +4,17 @@ const request = async (path, method) => {
         headers: { 'Content-type': 'application/json' }
     })
 
-    return response.json();
+    if (response.ok) {
+        return response.json();
+    }
+    throw new Error(`Error in a network request: ${response.url} [${response.status}] ${response.statusText}`);
 }
 
 export const getGitHubProfile = async (username) => {
     try {
-        return request(username);
+        return await request(username);
     } catch (e) {
-        console.log(`Error while fetching GitHub profile: ${e}`);
+        console.log(`Error while fetching GitHub profile: ${e.message}`);
         throw new Error('Error while fetching GitHub profile');
     }   
 }
