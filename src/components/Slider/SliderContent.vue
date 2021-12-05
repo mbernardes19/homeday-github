@@ -12,7 +12,6 @@ export default {
   props: ['currentSlideIndex', 'slides'],
   data() {
     return {
-      canContinue: true,
       slideIndex: parseInt(this.currentSlideIndex, 10),
     }
   },

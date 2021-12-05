@@ -22,7 +22,6 @@
 <script>
 import store from '../store';
 import slideBase from '../mixins/slide-base';
-// import {getGitHubProfile} from '../api';
 import {EMAIL_PATTERN} from '../utils/validation-patterns';
 
 export default {

@@ -8,7 +8,6 @@ export default {
             gitHubUserName: '',
             email: '',
             termsAndServices: false,
-            canSubmit: false,
         }
     }),
     setFirstNameAction(newValue) {

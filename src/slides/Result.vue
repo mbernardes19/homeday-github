@@ -4,7 +4,6 @@
     <h1 v-if="!loading" class="slide__title--medium">And BAM, here's your profile:</h1>
     <github-profile :data="data"></github-profile>
     {{ error && error.message }}
-    
   </div>
 </template>
 
@@ -45,13 +44,13 @@ export default {
   methods: {
     updateEmail(e) {
       store.setFirstNameAction(e.target.value);
-      this.canContinue();
+      this.validate();
     },
     updateTermsAndServices(e) {
       store.setTermsAndServicesAction(e.target.checked);
-      this.canContinue();
+      this.validate();
     },
-    canContinue() {
+    validate() {
       if (store.state.form.email && store.state.form.termsAndServices) {
         return true;
       }
