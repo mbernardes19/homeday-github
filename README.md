@@ -1,7 +1,11 @@
 # homeday-github2
 
+Demo: https://mbernardes19.github.io/homeday-github/
+
 ## Project setup
 ```
+git clone https://github.com/mbernardes19/homeday-github.git
+cd homeday-github
 npm install
 ```
 
