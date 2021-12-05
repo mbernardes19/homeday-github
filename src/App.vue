@@ -41,13 +41,13 @@ body {
   left: 0;
   z-index: -1;
   filter: opacity(.8) brightness(1.25);
-  background-image: url('https://images.unsplash.com/photo-1528819027803-5473f2bf7633?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8NHx8fGVufDB8fHx8&w=2260&q=5');
+  background-image: url('./assets/galaxy-background-desktop.jpeg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 
   @media screen and (max-width: 768px) {
-    background-image: url('https://images.unsplash.com/photo-1528819027803-5473f2bf7633?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8NHx8fGVufDB8fHx8&w=1000&q=70');
+    background-image: url('./assets/galaxy-background-mobile.jpeg');
   }
 }
 </style>
