@@ -21,7 +21,7 @@
 </template>
 
 <script>
-import ProfileItem from '../components/ProfileItem.vue';
+import ProfileItem from './ProfileItem.vue';
 
 export default {
     name: 'GithubProfile',

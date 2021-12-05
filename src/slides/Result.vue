@@ -12,10 +12,10 @@
 import store from '../store';
 import slideBase from '../mixins/slide-base';
 import removePageCentering from '../mixins/remove-page-centering';
-import GithubProfile from '../components/GithubProfile.vue';
+import GithubProfile from '@/components/GithubProfile';
 import {getGitHubProfile} from '../api';
 import {onMounted, ref} from 'vue';
-import Loader from '../components/Loader.vue';
+import Loader from '../components/Loader';
 
 export default {
   name: 'Result',

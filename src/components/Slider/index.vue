@@ -12,7 +12,7 @@
 </template>
 
 <script>
-import SliderContent from '@/components/SliderContent.vue';
+import SliderContent from './SliderContent.vue';
 
 export default {
   name: 'Slider',
