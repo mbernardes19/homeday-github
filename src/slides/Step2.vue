@@ -21,13 +21,13 @@
 
 <script>
 import store from '../store';
-import Slide from '../components/Slide.vue';
+import slideBase from '../mixins/slide-base';
 // import {getGitHubProfile} from '../api';
 import {EMAIL_PATTERN} from '../utils/validation-patterns';
 
 export default {
   name: 'Step1',
-  mixins: [Slide],
+  mixins: [slideBase],
   data() {
     return {
       form: store.state.form,

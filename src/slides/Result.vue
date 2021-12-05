@@ -10,19 +10,17 @@
 
 <script>
 import store from '../store';
-import Slide from '../components/Slide.vue';
+import slideBase from '../mixins/slide-base';
+import removePageCentering from '../mixins/remove-page-centering';
 import GithubProfile from '../components/GithubProfile.vue';
 import {getGitHubProfile} from '../api';
-import {onMounted, onUnmounted, ref} from 'vue';
+import {onMounted, ref} from 'vue';
 import Loader from '../components/Loader.vue';
 
 export default {
   name: 'Result',
   components: {GithubProfile, Loader},
-  mixins: [Slide],
-  beforeCreate() {
-    document.body.style.height = 'unset';
-  },
+  mixins: [slideBase, removePageCentering],
   setup() {
     const data = ref(null);
     const loading = ref(true);
@@ -36,10 +34,6 @@ export default {
       } catch (e) {
         error.value = e;
       }
-    })
-    
-    onUnmounted(() => {
-      document.body.style.height = '100vh';
     })
 
     return {

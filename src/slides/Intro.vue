@@ -7,11 +7,11 @@
 </template>
 
 <script>
-import Slide from '../components/Slide.vue';
+import slideBase from '../mixins/slide-base';
 
 export default {
   name: 'Intro',
-  mixins: [Slide],
+  mixins: [slideBase],
 }
 </script>
 
